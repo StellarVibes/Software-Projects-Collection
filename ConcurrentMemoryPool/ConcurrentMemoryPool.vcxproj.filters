@@ -15,27 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ThreadCache.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="UnitTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CentralCache.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="PageCache.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Benchmark.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ObjectPool.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ThreadCache.h">
+    <ClInclude Include="CentralCache.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Common.h">
@@ -44,7 +24,7 @@
     <ClInclude Include="ConcurrentAlloc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CentralCache.h">
+    <ClInclude Include="ObjectPool.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="PageCache.h">
@@ -53,5 +33,25 @@
     <ClInclude Include="PageMap.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ThreadCache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Benchmark.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CentralCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PageCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
