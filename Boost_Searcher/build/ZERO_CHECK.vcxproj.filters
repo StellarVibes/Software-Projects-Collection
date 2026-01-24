@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\19890\Documents\trae_projects\trae-project\Boost_Searcher\build\CMakeFiles\24108756e3f7a8702db63535f186044a\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{01272655-C2B0-38A7-B720-6B5572A4B5C4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

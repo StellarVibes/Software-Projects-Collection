@@ -4,8 +4,8 @@
 #include <fstream>
 #include <vector>
 #include <boost/algorithm/string.hpp>
-#include "cppjieba/Jieba.hpp"  //引入头文件（确保你建立的没有错误才可以使用）
- 
+#include "cppjieba/Jieba.hpp"
+
 namespace ns_util
 {
     class FileUtil
@@ -39,7 +39,7 @@ namespace ns_util
     {
         public:
         //切分字符串
-        static void Splist(const std::string &target, std::vector<std::string> *out, const std::string &sep)
+        static void Split(const std::string &target, std::vector<std::string> *out, const std::string &sep)
         {
             //boost库中的split函数
             boost::split(*out, target, boost::is_any_of(sep), boost::token_compress_on);
@@ -54,28 +54,32 @@ namespace ns_util
         }
     };
 
-    //下面这5个是分词时所需要的词库路径
-    const char* const DICT_PATH = "./dict/jieba.dict.utf8";    
-    const char* const HMM_PATH = "./dict/hmm_model.utf8";    
-    const char* const USER_DICT_PATH = "./dict/user.dict.utf8";    
-    const char* const IDF_PATH = "./dict/idf.utf8";    
-    const char* const STOP_WORD_PATH = "./dict/stop_words.utf8";  
-
-
     class JiebaUtil    
     {    
     private:    
-        static cppjieba::Jieba jieba; //定义静态的成员变量（需要在类外初始化）   
+        static cppjieba::Jieba jieba;
     public:    
         static void CutString(const std::string &src, std::vector<std::string> *out)    
         {   
-            //调用CutForSearch函数，第一个参数就是你要对谁进行分词，第二个参数就是分词后的结果存放到哪里
             jieba.CutForSearch(src, *out);    
         }     
     };
 
-    //类外初始化，就是将上面的路径传进去，具体和它的构造函数是相关的，具体可以去看一下源代码
-    cppjieba::Jieba JiebaUtil::jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH, IDF_PATH, STOP_WORD_PATH);
+    cppjieba::Jieba JiebaUtil::jieba(
+#ifdef DICT_PATH
+        DICT_PATH "/jieba.dict.utf8",
+        DICT_PATH "/hmm_model.utf8",
+        DICT_PATH "/user.dict.utf8",
+        DICT_PATH "/idf.utf8",
+        DICT_PATH "/stop_words.utf8"
+#else
+        "./cppjieba/dict/jieba.dict.utf8",
+        "./cppjieba/dict/hmm_model.utf8",
+        "./cppjieba/dict/user.dict.utf8",
+        "./cppjieba/dict/idf.utf8",
+        "./cppjieba/dict/stop_words.utf8"
+#endif
+    );
 
     
 }

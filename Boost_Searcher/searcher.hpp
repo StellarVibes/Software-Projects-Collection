@@ -1,8 +1,8 @@
 #pragma once  
 #include "index.hpp"
-#include "util.hpp"  // 用于分词
+#include "util.hpp"
 #include <algorithm>
-#include <jsoncpp/json/json.h>
+#include <json/json.h>
 #include <vector>
 #include <string>
 namespace ns_searcher
