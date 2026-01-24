@@ -140,7 +140,7 @@ namespace ns_index
             // 1. line -> 3 个 string (title , content , url)
             std::vector<std::string> results;
             std::string sep = "\3"; //行内分隔符
-            ns_util::StringUtil::Splist(line, &results, sep);//字符串切分 
+            ns_util::StringUtil::Split(line, &results, sep);//字符串切分 
             if(results.size() != 3)                                             
             {                                                                   
                 return nullptr;                                                 

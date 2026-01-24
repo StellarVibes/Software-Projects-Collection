@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/http_server.dir/http_server.cpp.o -o http_server  -lpthread /usr/lib/x86_64-linux-gnu/libjsoncpp.so.1.9.5 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/debug.dir/debug.cpp.o -o debug  /usr/lib/x86_64-linux-gnu/libjsoncpp.so.1.9.5 

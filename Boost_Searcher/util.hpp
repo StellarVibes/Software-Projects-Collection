@@ -66,19 +66,11 @@ namespace ns_util
     };
 
     cppjieba::Jieba JiebaUtil::jieba(
-#ifdef DICT_PATH
-        DICT_PATH "/jieba.dict.utf8",
-        DICT_PATH "/hmm_model.utf8",
-        DICT_PATH "/user.dict.utf8",
-        DICT_PATH "/idf.utf8",
-        DICT_PATH "/stop_words.utf8"
-#else
         "./cppjieba/dict/jieba.dict.utf8",
         "./cppjieba/dict/hmm_model.utf8",
         "./cppjieba/dict/user.dict.utf8",
         "./cppjieba/dict/idf.utf8",
         "./cppjieba/dict/stop_words.utf8"
-#endif
     );
 
     
